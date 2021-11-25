@@ -19,7 +19,7 @@ function Home(props) {
         </div>
         <div className="text-wrapper item">
           <span>I-Phone</span>
-          <span>Price:$1000.00</span>
+          <span>Price:$5.00</span>
         </div>
         <div className="btn-wrapper item">
           <button>Add To Cart</button>
