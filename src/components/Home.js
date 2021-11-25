@@ -1,14 +1,9 @@
 import React from "react";
 
 function Home(props) {
+  console.log("props", props.data);
   return (
     <div>
-      <div className="add-to-cart">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrxccf_eR5rTLB8MCgYddpKxfhnp6dFM4U2ciUaYzDexaGEoSR6qqxp6d_C3K7eTcex3I&usqp=CAU"
-          alt="uploading"
-        />
-      </div>
       <h1>Home Components</h1>
       <div className="cart-wrapper">
         <div className="img-wrapper item">
@@ -22,7 +17,21 @@ function Home(props) {
           <span>Price:$5.00</span>
         </div>
         <div className="btn-wrapper item">
-          <button>Add To Cart</button>
+          <button className="add-btn"
+            onClick={() =>
+              props.addToCartHandler({ price: 1000, name: "I-Phone 13pro" })
+            }
+          >
+            Add To Cart
+          </button>
+
+          <button className="remove-btn"
+            onClick={() =>
+              props.removeToCartHandler({ })
+            }
+          >
+            Remove To Cart
+          </button>
         </div>
       </div>
     </div>
